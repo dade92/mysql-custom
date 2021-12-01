@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mysqldb:
+    build: .
+    image: mysql-custom
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-custom-data:/var/lib/mysql
+volumes:
+  mysql-custom-data:
+    driver: local
